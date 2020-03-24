@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <title>goodreads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='first.css')}}">
+</head>
+<body>
+  <div class="e">
+  {% if get_flashed_messages() %}
+      <font color = "red">
+      <div class="alert alert-info text-center" role="alert">
+          {{ get_flashed_messages() | join(" ") }}
+      </div>
+    </font>
+  {% endif %}
+  <div class="x"></div>
+  <div class="grad"></div>
+  <div class="header">
+    <div>Good<span> reads</span></div>
+  </div>
+  <br>
+  <form action="{{url_for('login')}}" method ="post">
+  <div class="login">
+      <input type="text" placeholder="username" name="user"><br>
+      <input type="text" placeholder="Email" name="email"><br>
+      <input type="password" placeholder="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    <br><br>
+    </form>
+    <a href = "{{url_for('register')}}">register now</a>
+  </div>
+</div>
+</body>

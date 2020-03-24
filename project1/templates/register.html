@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>goodreads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='first.css')}}">
+</head>
+<body>
+  <div class="e">
+  <div class="x"></div>
+  <div class="grad"></div>
+  <div class="header">
+    <div>Good<span> reads</span></div>
+  </div>
+  <br>
+  <form action="{{url_for('register')}}" method ="post">
+  <div class="login">
+      <input type="text" placeholder="username" name="user"><br>
+      <input type="text" placeholder="Email" name="email"><br>
+      <input type="password" placeholder="password" name="password"><br><br>
+      <input type="submit" value="register">
+    <br><br>
+    </form>
+  </div>
+</div>
+</body>
